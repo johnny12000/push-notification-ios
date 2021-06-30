@@ -152,7 +152,7 @@ RCT_ENUM_CONVERTER(UIBackgroundFetchResult, (@{
     if (request.trigger) {
         UNCalendarNotificationTrigger* trigger = (UNCalendarNotificationTrigger*)request.trigger;
         NSDateFormatter *formatter = [NSDateFormatter new];
-        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"];
+        [formatter setDateFormat:@"dd/MM/yyyy H:mm:ss a"];
         NSString *dateString = [formatter stringFromDate:trigger.nextTriggerDate];
         formattedRequest[@"date"] = dateString;
     }
